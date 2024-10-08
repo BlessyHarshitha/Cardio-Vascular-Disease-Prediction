@@ -1,0 +1,34 @@
+# Heart Disease Prediction using Deep Learning
+
+## Overview
+
+This project implements a heart disease prediction model using various deep learning architectures, including Deep Neural Networks (DNN), Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), and Bidirectional RNNs (BiRNN). The goal is to predict the presence of heart disease based on patient data and provide an ensemble model that leverages the strengths of each architecture to improve prediction accuracy.
+
+## Dataset
+
+The dataset used for this project is the **Heart Disease UCI** dataset, which contains various attributes related to heart health, including demographic information, clinical measurements, and target labels indicating the presence of heart disease.
+
+## Methodology
+
+1. **Data Loading and Preprocessing**:
+   - The dataset is loaded and inspected using Pandas.
+   - Features are normalized using `StandardScaler` for improved model performance.
+   - The data is split into training and testing sets (80% train, 20% test).
+
+2. **Model Development**:
+   - **Deep Neural Network (DNN)**: A fully connected neural network with dropout layers for regularization.
+   - **Convolutional Neural Network (CNN)**: A CNN model designed for time-series data, utilizing convolutional layers and max pooling.
+   - **Recurrent Neural Network (RNN)**: An LSTM-based RNN to capture temporal dependencies in the data.
+   - **Bidirectional RNN (BiRNN)**: An LSTM model that processes the input sequences in both directions for better context capture.
+
+3. **Ensemble Model Training and Prediction**:
+   - The input data is reshaped to accommodate CNN and RNN architectures.
+   - Each model is trained separately, and predictions are made on the test set.
+   - An ensemble prediction is created by averaging the outputs of all models, with a threshold to determine the final class.
+
+4. **Evaluation**:
+   - The ensemble model's performance is evaluated using metrics such as accuracy, precision, recall, and F1-score.
+
+## Results
+
+The evaluation metrics for the ensemble model are printed to the console, providing insights into its performance on the test dataset.
